@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: demo-mvn-test
+spec:
+  resources:
+    inputs:
+      - name: repo-demo
+        type: git
+  steps:
+    - name: run-test
+      image: maven:latest
+      workingDir: /workspace/repo/src
+      command: ["mvn"]
+      args: ["test"]

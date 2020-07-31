@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: andrzejpioro-tekton-example
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/andrzejpioro/tekton-example
+    - name: revision
+      value: master
