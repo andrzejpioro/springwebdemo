@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pl.pioro.tutorial</groupId>
 	<artifactId>piorodemo</artifactId>
@@ -18,11 +19,11 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.compiler.source>1.8</maven.compiler.source> <!-- REQUIRED -->
-	    <maven.compiler.target>1.8</maven.compiler.target> <!-- REQUIRED -->
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	   
-	    <google.project.id>find-seller-100100</google.project.id>
-	    
+		<maven.compiler.target>1.8</maven.compiler.target> <!-- REQUIRED -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<google.project.id>find-seller-100100</google.project.id>
+
 	</properties>
 
 	<dependencies>
@@ -47,63 +48,63 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		
-		 <!-- TESTING -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-junit-jupiter</artifactId>
-      <scope>test</scope>
-    </dependency>
-    
-    
-    <dependency>
-    	<groupId>org.springframework</groupId>
-    	<artifactId>spring-jdbc</artifactId>
-	</dependency>
 
-    <!-- Test Containers -->
-    <dependency>
-      <groupId>org.testcontainers</groupId>
-      <artifactId>mysql</artifactId>
-      <version>1.12.3</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.testcontainers</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>1.12.3</version>
-      <scope>test</scope>
-    </dependency>
-		
-		
-	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.20</version>
-</dependency>
-		
+
+		<!-- TESTING -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- Test Containers -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>mysql</artifactId>
+			<version>1.12.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>1.12.3</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -113,66 +114,73 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-			   <groupId>com.google.cloud.tools</groupId>
-			   <artifactId>appengine-maven-plugin</artifactId>
-			   <version>2.2.0</version>
-			   <configuration>
-		          <version>1</version>
-		          <projectId>GCLOUD_CONFIG</projectId>
-		       </configuration>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.2.0</version>
+				<configuration>
+					<version>1</version>
+					<projectId>GCLOUD_CONFIG</projectId>
+				</configuration>
 			</plugin>
 			<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-surefire-plugin</artifactId>
-		        <configuration>
-		            <includes>
-		                <include>**/*Test*.java</include>
-		            </includes>
-		        </configuration>
-		    </plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<includes>
+						<include>**/*Test*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
 		</plugins>
-		
+
 	</build>
 	<distributionManagement>
-		<repository>
-	      <id>nexus-releases</id>
-	      <url>http://localhost:8081/repository/releases/</url>
-	   </repository>
-	</distributionManagement>
 	
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+		</repository>
+	
+	</distributionManagement>
+
 	<scm>
 		<connection>scm:git:https://github.com/andrzejpioro/springwebdemo.git</connection>
 		<url>https://github.com/andrzejpioro/springwebdemo</url>
 		<developerConnection>scm:git:https://github.com/andrzejpioro/springwebdemo.git</developerConnection>
 	</scm>
-	
-	
+
+
 	<profiles>
-   <profile>
-      <id>releases</id>
-      <build>
-         <plugins>
-            <plugin>
-               <groupId>org.sonatype.plugins</groupId>
-               <artifactId>nexus-staging-maven-plugin</artifactId>
-               <version>1.5.1</version>
-               <executions>
-                  <execution>
-                     <id>default-deploy</id>
-                     <phase>deploy</phase>
-                     <goals>
-                        <goal>deploy</goal>
-                     </goals>
-                  </execution>
-               </executions>
-               <configuration>
-                  <serverId>nexus-releases</serverId>
-                  <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-                  <skipStaging>true</skipStaging>
-               </configuration>
-            </plugin>
-         </plugins>
-      </build>
-   </profile>
-</profiles>
+		<profile>
+			<id>releases</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>1.5.1</version>
+						<executions>
+							<execution>
+								<id>default-deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<serverId>nexus-releases</serverId>
+							<nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+							<skipStaging>true</skipStaging>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
