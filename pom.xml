@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>pl.pioro.tutorial</groupId>
 	<artifactId>piorodemo</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>springwebdemo</name>
 	<description>My Simple App in AppEngine</description>
@@ -131,11 +131,20 @@
 					</includes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<!-- <configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+				</configuration> -->
+			</plugin>
+
 		</plugins>
 
 	</build>
 	<distributionManagement>
-	
+
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<url>http://localhost:8081/repository/maven-snapshots/</url>
@@ -145,7 +154,7 @@
 			<id>nexus-releases</id>
 			<url>http://localhost:8081/repository/maven-releases/</url>
 		</repository>
-	
+
 	</distributionManagement>
 
 	<scm>
@@ -155,32 +164,5 @@
 	</scm>
 
 
-	<profiles>
-		<profile>
-			<id>releases</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.sonatype.plugins</groupId>
-						<artifactId>nexus-staging-maven-plugin</artifactId>
-						<version>1.5.1</version>
-						<executions>
-							<execution>
-								<id>default-deploy</id>
-								<phase>deploy</phase>
-								<goals>
-									<goal>deploy</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<serverId>nexus-releases</serverId>
-							<nexusUrl>http://localhost:8081/nexus/</nexusUrl>
-							<skipStaging>true</skipStaging>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+	
 </project>
