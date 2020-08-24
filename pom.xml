@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>pl.pioro.tutorial</groupId>
 	<artifactId>piorodemo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>springwebdemo</name>
 	<description>My Simple App in AppEngine</description>
