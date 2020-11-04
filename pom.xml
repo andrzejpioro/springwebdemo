@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>pl.pioro.tutorial</groupId>
 	<artifactId>piorodemo</artifactId>
-	<version>0.0.8-SNAPSHOT</version>
+	<version>0.0.8</version>
 	<packaging>war</packaging>
 	<name>springwebdemo</name>
 	<description>My Simple App in AppEngine</description>
@@ -159,7 +159,7 @@
 		<connection>scm:git:https://github.com/andrzejpioro/springwebdemo.git</connection>
 		<url>https://github.com/andrzejpioro/springwebdemo</url>
 		<developerConnection>scm:git:https://github.com/andrzejpioro/springwebdemo.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>piorodemo-0.0.8</tag>
   </scm>
 
 
